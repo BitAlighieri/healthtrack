@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Actualizar Peso</title>
+</head>
+<body>
+<h1>Actualizar Peso</h1>
+<form id="formPeso">
+    <label for="peso">Peso (kg):</label>
+    <input type="number" id="peso" name="peso" required>
+    <button type="submit">Actualizar</button>
+</form>
+<p id="resultado"></p>
+
+<script>
+    document.getElementById('formPeso').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const peso = document.getElementById('peso').value;
+        document.getElementById('resultado').innerText = 'Peso actualizado a ' + peso + ' kg';
+    });
+</script>
+</body>
+</html>
